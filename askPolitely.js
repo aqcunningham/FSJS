@@ -29,11 +29,6 @@ function askPolitely(sentence){
         else {
           return sentence.slice(0, -1) + ' please?';
         }
-    //return sentence;
-  }
-  else if (sentence.slice(-1) === '.') {
-
-    return sentence;
   }
   else {
     return sentence;
