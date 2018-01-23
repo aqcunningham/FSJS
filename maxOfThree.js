@@ -38,11 +38,12 @@ function maxOfThree(a, b, c) {
 
 /* another solution
 
-function maxOfThree(a,b,b){
+function maxOfThree(a, b, c){
 	if (a> b && a > c){
 		return a;
 	} else if(b > c){
 		return b;
 	} else {
 		return c;
-	} */
+	} 
+	}*/
