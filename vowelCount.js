@@ -37,3 +37,17 @@ function vowelCount(str){
 
 vowelCount('good jooaeb')
 
+
+/*
+another version:
+function z(str){
+  var c = 0;
+  var vw='aeiouAEIOU';
+  for (var ind = 0; ind < str.length; ind++) {
+  if (vw.indexOf(str[ind]) !== -1) {
+   c+=1;
+}
+
+}
+return c;
+}*/
