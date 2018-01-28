@@ -22,7 +22,7 @@ Create a function "repeat" that accepts two arguments, the string to repeat and 
   function repeat(str, n){
   var fs='';
   for (n; n>0; n--){ //this cycle is needed, so every incremented bit adds one part of str to the final string
-      //console.log(fs);
+      // the difference btwn FL and WL is that FL has a control of # of repetition in the first(initialization) statge
       fs+=str;
   }  
   return fs;
@@ -31,3 +31,14 @@ Create a function "repeat" that accepts two arguments, the string to repeat and 
 repeat('lol', 5);
 
 // another solution:
+/*
+function repeat(str, n){
+//  debugger;
+  fs = '';
+  while (n>=1){
+    fs += str;
+    n--;
+  }
+  return fs;
+}
+repeat('y', 4);
