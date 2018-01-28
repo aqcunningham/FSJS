@@ -21,7 +21,7 @@ Create a function "repeat" that accepts two arguments, the string to repeat and 
 
   function repeat(str, n){
   var fs='';
-  for (n; n>0; n--){
+  for (n; n>0; n--){ //this cycle is needed, so every incremented bit adds one part of str to the final string
       //console.log(fs);
       fs+=str;
   }  
@@ -29,3 +29,5 @@ Create a function "repeat" that accepts two arguments, the string to repeat and 
 }
 
 repeat('lol', 5);
+
+// another solution:
