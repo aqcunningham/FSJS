@@ -25,7 +25,7 @@ Do not count 'y' as a vowel for this challenge.
 
 function vowelCount(str){
   var fc = 0;
-  for (ind = 0; ind < str.length; ind++){
+  for (ind = 0; ind < str.length; ind++){ //scanning a string from the beginning till the last letter (ind<length)
     if (str[ind] === 'a'||str[ind] === 'e'||str[ind] === 'i'||str[ind] === 'o'||str[ind] === 'u'||str[ind] === 'A'||str[ind] === 'E'||str[ind] === 'I'||str[ind] === 'O'||str[ind] === 'U'){
       fc+=1;
     }
@@ -50,4 +50,20 @@ function z(str){
 
 }
 return c;
-}*/
+}
+
+__ another one:
+
+function vowelCount(str){
+debugger;  
+var ns = '';
+var vowels = 'aeoiu';
+for(var ind = 0; ind < str.length; ind++ ){
+//if (str[ind] === 'a'){
+if ((vowels.indexOf(str[ind].toLowerCase())) !== -1){
+  ns++;
+
+}
+}
+return ns;
+}
