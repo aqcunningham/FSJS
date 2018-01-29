@@ -30,3 +30,14 @@ function sumOfDigits(n){
 }
 
 sumOfDigits(123);
+
+/* another solution:
+
+function sumOfDigits(n){
+  var sum =0;
+  while (n>0){
+    sum +=n%10; //chunks each last digit
+    n = Math.floor(n/10); //creates a new n without last digit
+}
+  return sum;
+} */
