@@ -1,12 +1,32 @@
 /*
-a decision, not full.
+Sum Of Digits- Exercise Link
+
+Create the function sumOfDigits that adds individual digits of a number and return the sum.
+
+
+**Example:**
+
+- INPUT: `sumOfDigits(414);`
+4+1+4
+- Return Value: `9`
+
+- INPUT: `sumOfDigits(2913);`
+- Return Value: `15`
+
+TIP:
+
+You may need to use the following methods or operators in your solution, reference the workshop page for additional information. 123*/
+
+//first raw solution:
+
 function sumOfDigits(n){
-  
-  z = n.toString();
-  //for (n; n>=0; n--){
-    ff = (Number(z[0])+Number(z[1])+Number(z[2]));
-  
-  return ff;
+  var sum = 0;
+  str = n.toString(); //now n is a str
+  for (var ind = 0; ind < str.length; ind++){
+    strToNum = Number(str[ind]); //here we convert each str ind to num
+    sum += strToNum;
+  }
+ return sum;
 }
 
-sumOfDigits(568);*/
+sumOfDigits(123);
