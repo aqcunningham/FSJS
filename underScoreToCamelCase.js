@@ -25,3 +25,28 @@ function underToCamel(str){
    
    return fs;
 }
+
+
+//a decision, that I didnt completely understand:
+/*
+
+function underToCamel(str){
+  var fd = false;
+  var ns = '';
+  for (var i = 0; i < str.length; i++){
+   if (str[i] === "_")  {
+     fd = true;
+   }
+   else {
+     if (fd){
+       ns +=str[i].toUpperCase(); //how does it know it's the next char after '_'?
+       fd = false;
+     }
+     else {
+       ns += str[i];
+     }
+   }
+  }
+  return ns;
+  }
+  */
