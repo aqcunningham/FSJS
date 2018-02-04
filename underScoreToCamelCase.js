@@ -18,7 +18,7 @@ Make sure you support an unlimited number of underscores in the input!
 
 function underToCamel(str){
      if (str.indexOf('_') > -1) {
-       var cpLet = str.charAt((str.indexOf('_')+1)).toUpperCase(); //
+       var cpLet = str.charAt((str.indexOf('_')+1)).toUpperCase(); // saves the first underscore and converts into upperCase, which is not suitable for strings with several underscores.
        var fs = str.replace(/_\w/g, cpLet);
           //(vowels.indexOf(str[ind].toLowerCase())) !== -1)
      }
