@@ -15,7 +15,7 @@ Not sure what the factorial is? Check this [link for a refresher!](http://www.ra
 
 function factorial(num){
   var sum = 1;
-  for (var i = num; num>0; num--){
+  for (num; num>0; num--){
     sum *=num;
   }
   return sum;
