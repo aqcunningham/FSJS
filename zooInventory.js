@@ -24,3 +24,18 @@ function zooInventory(arr){
     }
     return newarr;
 }
+
+
+//better solution:
+
+function zooInventory(arr){
+  var newarr = [];
+    for (var i = 0; i<arr.length; i++){
+      var animal = arr[i]; //created a new arr
+        //console.log(arr[i]+ 'the ' + arr[i][j] +'is');
+        newarr.push(animal[0] + ' the '+ animal[1][0] + ' is ' + animal[1][1]);
+        //return;// + 'the ' +arr[j][0];
+      
+    }
+    return newarr;
+}
