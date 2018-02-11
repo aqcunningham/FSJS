@@ -18,13 +18,6 @@ Examples:
 
 // Write Code Below
 
-
-
-
-
-
-
-
 function prime(n){
   if (n%2 !== 0 && n%3 !== 0){
     return true;
@@ -34,25 +27,13 @@ function prime(n){
   }
 }
 
+// another solution:
 
-
-
-describe('prime', function(){
-  it('prime is a function', function(){
-    expect(typeof prime).toEqual('function');
-  });
-
-  it('prime returns a boolean', function(){
-    expect(typeof prime(10)).toEqual('boolean');
-  });
-
-  it('prime returns `true` if the number is prime', function(){
-    expect(prime(5)).toEqual(true);
-    expect(prime(7)).toEqual(true);
-  });
-
-  it('prime returns `false` if the number is not prime', function(){
-    expect(prime(24)).toEqual(false);
-    expect(prime(56)).toEqual(false);  
-  });
-});
+function isPrime(num){
+  for(var i=2; i < num; i++){
+	 	if(num%i === 0){
+	   		return false;
+	 	}
+  }
+  return num > 1;
+}
