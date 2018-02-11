@@ -23,3 +23,19 @@ function evenOdd(arr){
   }
   return finalarr;
 }
+
+// cleaner version:
+
+function evenOdd(arr){
+  var evenarr = [];
+  var oddarr = [];
+  for (var i = 0; i < arr.length; i++){
+    if(arr[i]%2){ //no need to specify if it's true, becase if it's zero it's true?
+      evenarr.push(arr[i]);
+    }
+    else {
+      oddarr.push(arr[i]);
+    }
+  }
+  return [evenarr, oddarr];
+}
