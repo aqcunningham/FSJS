@@ -1,7 +1,7 @@
 function flatten(arr){
   var newarr = [];
   for (var i = 0; i < arr.length; i++){
-    if (typeof arr[i] === 'object'){
+    if (typeof arr[i] === 'object'){ //or anonther condition: if (Array.isArray(arr[i]))
     for ( var j = 0; j< arr[i].length; j++){
       newarr.push(arr[i][j]);  
     }
