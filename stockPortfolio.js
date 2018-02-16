@@ -14,3 +14,20 @@ function totalPortfolioValue(ticker, value){
  }
   
 }
+
+
+//correct solution, get back to it later:
+
+function totalPortfolioValue(ticker, value){
+ var finalport = 0;
+ for (var i =0; i<value.length; i++){
+   var indexTracker = ticker.indexOf(value[i][0]);
+     if(indexTracker>-1){
+       finalport +=ticker[indexTracker+1]*value[i][1];
+     
+     }
+   }
+  
+ 
+   return finalport;
+ }
