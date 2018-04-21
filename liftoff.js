@@ -15,3 +15,12 @@ console.log( 'liftoff!');
   
 }
 
+/* another solution:
+function z(n) {
+for (n; n>1; n--) {
+  console.log(n);
+}
+  console.log( 'Liftoff!');
+}
+z(5);
+*/
