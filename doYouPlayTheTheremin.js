@@ -33,12 +33,19 @@ function doYouPlayTheTheremin(name){
 }
 
 
-/* another solution:
+// another solution:
 function doYouPlayTheTheremin(name){
-  if (name[0].toLowerCase === 's') {
+  if (name[0].toLowerCase() === 's') {
     return name + ' plays the Theremin!';
   }
   else {
     return name + ' does not play the Theremin!';
   }
-} */
+} 
+
+//w arrow function:
+
+var doYouPlayTheTheremin=(str)=>{
+    if(str[0].toLowerCase() === 's') return true;
+    else return false;
+}
