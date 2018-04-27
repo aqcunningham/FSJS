@@ -31,3 +31,14 @@ const myMnemonic = (one,two, three, four)=>{
     return mnem;
 
 }
+
+//another solution:
+const myMnemonic = (...arr)=>{
+    let mnem='';
+    for (var i = 0; i<arr.length; i++){
+        var w = arr[i];
+        var ch = w[0];
+        mnem +=ch;
+    }
+    return mnem;
+}
