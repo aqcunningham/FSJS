@@ -36,7 +36,7 @@ function maxOfThree(a, b, c) {
   }
 }
 
-/* another solution
+//another solution
 
 function maxOfThree(a, b, c){
 	if (a> b && a > c){
@@ -46,4 +46,11 @@ function maxOfThree(a, b, c){
 	} else {
 		return c;
 	} 
-	}*/
+	}
+//one more
+
+const maxOfThree=(a,b,c)=>{
+ return (a>b&&a>c) ? a 
+    : (b>c&&b>a) ? b
+    : c
+}
