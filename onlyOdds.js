@@ -32,3 +32,17 @@ let onlyOdds=(n)=>{
         else return 0;
     }
 }
+
+//correct solution:
+
+let onlyOdds=(n)=>{
+    let sum = 0;
+      if (n>1){ //found prime num i.e. 7,11
+        for (let x = 1; x<=n; x+=2){
+                    sum+=x;
+                }
+            return sum;    
+          }
+      else return 0;    
+}
+onlyOdds(7)
