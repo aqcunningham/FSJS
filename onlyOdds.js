@@ -16,7 +16,7 @@
 // 6 = 135 9 
 
 //almost works
-//prints out the sum of all off numbers if the n is prime
+//prints out the sum of all odd numbers if the n is prime
 let onlyOdds=(n)=>{
     let sum = 0;
     for (var i = 1; n>1; n--){
@@ -37,8 +37,8 @@ let onlyOdds=(n)=>{
 
 let onlyOdds=(n)=>{
     let sum = 0;
-      if (n>1){ //found prime num i.e. 7,11
-        for (let x = 1; x<=n; x+=2){
+      if (n>1){ 
+        for (let x = 1; x<=n; x+=2){//no need to check the n for odd, since we increment from 1
                     sum+=x;
                 }
             return sum;    
@@ -46,3 +46,17 @@ let onlyOdds=(n)=>{
       else return 0;    
 }
 onlyOdds(7)
+
+
+//cleaner version of above:
+
+let onlyOdds=(n)=>{
+  let sum = 0;
+    for( var i = n; i>=1; i--){
+      if (i%2 !== 0){
+      sum+=i;  
+      }
+    }
+  return sum;
+}
+onlyOdds(0);
