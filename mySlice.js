@@ -88,5 +88,15 @@ const mySlice = (originalString, startIdx, endIdx)=>{
       return x;
       }
 
+//Default Parameters 
+//stipulate what the values of an arguement should one not be passed into the invocarion of a function
 
-//
+const mySlice = (originalString, startIdx = 0, endIdx = originalString.length)=>{ //here for strInd if there's no
+  //argument passed, it will be 0, same for endIdx
+    let x = '';
+      for( let i = startIdx; i<endIdx; i++){
+          x+=originalString[i];
+        }
+      return x;
+      }
+    
