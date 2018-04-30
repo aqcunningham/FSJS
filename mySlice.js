@@ -49,4 +49,26 @@ function mySlice(arr, n, m){
 
 mySlice([1,2,3,4], -1, 3);
 
+//mySlice with strings:
 
+
+const mySlice = (originalString, startIdx, endIdx)=>{
+    debugger;
+    let x = '';
+      if (startIdx === undefined && endIdx === undefined){
+        x = originalString;
+      }
+      else if (startIdx>=0 && endIdx === undefined){
+        for( let i = startIdx; i<originalString.length; i++){
+          x+=originalString[i];
+        }
+      
+      }
+      else if (endIdx>=startIdx){
+        for (let j = startIdx; j<endIdx; j++){
+          x+=originalString[j];
+        }
+
+      }
+      return x;
+      }
