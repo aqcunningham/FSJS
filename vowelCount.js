@@ -38,8 +38,8 @@ function vowelCount(str){
 vowelCount('good jooaeb')
 
 
-/*
-another version:
+
+//another version:
 function z(str){
   var c = 0;
   var vw='aeiouAEIOU';
@@ -52,7 +52,7 @@ function z(str){
 return c;
 }
 
-__ another one:
+//another one:
 
 function vowelCount(str){
 debugger;  
