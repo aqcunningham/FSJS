@@ -53,7 +53,6 @@ mySlice([1,2,3,4], -1, 3);
 
 
 const mySlice = (originalString, startIdx, endIdx)=>{
-    debugger;
     let x = '';
       if (startIdx === undefined && endIdx === undefined){
         x = originalString;
@@ -70,5 +69,21 @@ const mySlice = (originalString, startIdx, endIdx)=>{
         }
 
       }
+      return x;
+      }
+
+//another way of the same code ffrom above:
+
+const mySlice = (originalString, startIdx, endIdx)=>{
+    let x = '';
+    let beg = 0; //if not defined, the beginning of the str will be 0th index
+    let endd = originalString.length-1; //if not defined, the ending index is before the last char of the length
+  
+      if (startIdx) beg = startIdx; //since startInd defined, save it in the beginning
+      if (endIdx) endd = endIdx; //since ending index defined, save it in endd
+        
+      for( let i = beg; i<endd; i++){ //instead of parallel two 'for' loops, by sending beg and endd we use one loop
+          x+=originalString[i];
+        }
       return x;
       }
