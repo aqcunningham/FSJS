@@ -1,8 +1,19 @@
-/**
-Write a function that compares two values and returns "how equal" those two values are. If they are strictly equal return "strictly", if they are loosely equal return "loosely", and if they are neither return "not equal".
 
-Note: Study the examples below. Due to type coercion, you may not always get the result you expect!**/
+// YOUR CODE BELOW
+// ### How Equal
 
+// Define a function, `howEqual`, that accepts two arguments of any type.
+
+// `howEqual` should return the string 'loosely' if the two values passed into
+// the function are loosely equal. `howEqual` should return 'strictly' if the two
+// values are strictly equal. `howEqual` should return the string 'not equal' if
+// the two values are neither strictly nor loosely equal.
+
+// ```javascript
+// howEqual(0, '0'); // => loosely
+// howEqual(3, 9/3); // => strictly
+// howEqual(true, 'truthy') // => not equal
+//```
 
 function howEqual(a,b){
   if(a===b){
@@ -29,4 +40,12 @@ function howEquial(a, b){
 function onlyOne(x, y, z) {
   return (!!x + !!y + !!z === 1); //que?
   
+}
+
+//another solution
+
+const howEqual=(a,b)=>{
+    return (a === b) ? 'strictly' //the order is important when showing 'strictly' first
+    : (a == b) ? 'loosely'
+    : 'not equal'
 }
