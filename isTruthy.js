@@ -29,3 +29,28 @@ const isTruthy=(n)=>{
     : (n === '') ? 'The empty string is falsey (the only falsey string)'
     : true
 }
+
+
+//another solution from the course:
+
+
+
+const isTruthy=(n)=>{
+   if (n) return true;
+   switch (n){
+     case false:
+       return 'The boolean value false is falsey';
+    case null:
+      return 'The null value is falsey';
+    case undefined:
+      return 'undefined is falsey';
+    case 0:
+      return 'The number 0 is falsey (the only falsey number)'
+    case'':
+      return 'The empty string is falsey (the only falsey string)'
+    default:
+    return 'Nan is falsey'
+}
+}
+
+isTruthy(NaN)
