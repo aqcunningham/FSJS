@@ -7,7 +7,7 @@ function testFour(msg) {
     msg = msg
 
     function doubleInner(msg) {
-      testFourMessag = msg;
+      testFourMessag = msg; //here, testFourMessag[e] 'e' deleted to prevent readdigning
       return testFourMessage;
     }
 
