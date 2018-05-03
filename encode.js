@@ -48,7 +48,8 @@ else if (str.slice(0,8) == 'decode: '){
     else finest+=str[j]; }
   
 }   
-  return finest;
+   else return false
+   return finest;
 }
 
 code('decode: nll gi oeywhtrt wnah yiu')
