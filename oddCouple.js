@@ -18,6 +18,24 @@
 // oddCouple(2, 4, 6, 8); // => []
 // ```
 
+//first solution:
+const oddCouple=(arr)=>{
+let nn = [];
+for ( let i = 0; i<arr.length; i++){
+    if (arr[i] % 2 !== 0){
+        nn.push(arr[i]);
+    }
+}
+// return nn;
+if (nn.length>2){
+  return nn.slice(0,2);
+}
+else return nn;
+}
+
+//shorter solution:
+oddCouple([1,2])
+
 const oddCouple=(arr)=>{
     let k = [];
     
