@@ -39,3 +39,20 @@ function zooInventory(arr){
     }
     return newarr;
 }
+
+//different solution:
+
+const zooInventory=(arr)=>{
+    let newarr = [];
+    for ( let i = 0; i<arr.length; i++){
+        
+        const currentAnimal = arr[i];
+        
+        const name = currentAnimal[0];
+        const type = currentAnimal[1][0];
+        const age = currentAnimal[1][1];
+        
+        newarr.push(`${name} the ${type} is ${age}.`);
+    }
+    return newarr;
+}
