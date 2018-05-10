@@ -56,3 +56,17 @@ const zooInventory=(arr)=>{
     }
     return newarr;
 }
+
+
+//another way:
+
+const zooInventory=(arr)=>{
+    let newarr = [];
+    for ( let i = 0; i<arr.length; i++){
+        
+        const [name, [type, age]] = arr[i];
+  
+        newarr.push(`${name} the ${type} is ${age}.`);
+    }
+    return newarr;
+}
