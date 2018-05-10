@@ -1,3 +1,5 @@
+//looks like it works for two-dimentional array
+
 function flatten(arr){
   var newarr = [];
   for (var i = 0; i < arr.length; i++){
@@ -14,3 +16,28 @@ function flatten(arr){
   }
   return newarr;
 }
+
+//solution for multiarray
+
+
+//let beat = 
+const flatten =(arr)=>{
+  let final = [];
+
+for (let i = 0; i<arr.length; i++){
+  
+  let element = arr[i];
+  
+  if(Array.isArray(element)) {
+    for (let j = 0; j< element.length; j++){
+      final.push(element[j]);
+    }
+  } else {
+    final.push(element);
+  }
+  
+}
+return final;
+}
+
+flatten([['jack','maria'],'alice',['ben','kim']])
