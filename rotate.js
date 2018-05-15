@@ -27,7 +27,8 @@ const rotateArray = (arr, n) => {
 
     const cond = n > 0 ? 'right' : 'left'; //ternary operator
     
-      for (let i = 0; i < Math.abs(n); i++){ //here the abs n is counter
+      for (let i = 0; i < Math.abs(n); i++){ //here the abs n is counter || up to max n, so if n is too big,
+         // Math.abs(n) % arr.length; a quicker version
         if (cond === 'right') arr.unshift(arr.pop());
         if (cond === 'left') arr.push(arr.shift());
       }
