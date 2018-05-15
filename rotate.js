@@ -20,3 +20,16 @@ function rotate(arr, n){
   }
   return arr;
 }
+
+//solution w neg numbers:
+
+const rotateArray = (arr, n) => {
+
+    const cond = n > 0 ? 'right' : 'left'; //ternary operator
+    
+      for (let i = 0; i < Math.abs(n); i++){ //here the abs n is counter
+        if (cond === 'right') arr.unshift(arr.pop());
+        if (cond === 'left') arr.push(arr.shift());
+      }
+        return arr;
+    }
