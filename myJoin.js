@@ -86,7 +86,7 @@ const myJoin=(arr,sep = ',')=>{
     else final += `${arr[i]}${sep}`;
 }
 if (arr.length){
-  final+=arr[arr.length-1];
+  final+=arr[arr.length-1]; //not sure what happened here
 }
 return final;
 }
