@@ -41,3 +41,19 @@ return final;
 }
 
 flatten([['jack','maria'],'alice',['ben','kim']])
+
+
+//a multiD flatten arr:
+
+const flatten = (arr) => {
+  const flat = [];
+
+  arr.forEach(arr => {
+    if (Array.isArray(arr)) flat.push(...flatten(arr));
+    else flat.push(arr);
+  });
+
+  return flat;
+}
+
+flatten([1, 2, 3, 4, 5, 6, [7, [8]], 9])
