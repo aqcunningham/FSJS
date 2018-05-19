@@ -30,8 +30,20 @@
 // YOUR CODE BELOW
 
 const chainReaction = (x, funArr) => {
+    // 
+    for (let i = 0; i<funArr.length; i++){
+        const cb = funArr[i];
+        x=cb(x);
+    }
+    return x;
+}
+
+//another way:
+const chainReaction = (x, funArr) => {
     funArr.forEach((cb) => {
         x=cb(x);
     })
     return x;
 }
+
+
