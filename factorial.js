@@ -23,3 +23,13 @@ function factorial(num){
 
 factorial(5);
 
+//with recursion:
+function factorial (n){
+  //base case
+  if(n === 1 || n === 0){
+    return 1;
+  }
+  let f = n*(factorial(n-1));
+  return f;
+}
+factorial(3)
