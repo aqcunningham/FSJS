@@ -71,3 +71,22 @@ const flatten = (arr) => {
 }
 
 flatten([1, 2, 3, 4, 5, 6, [7, [8]], 9])
+
+
+//concat multidim arr elements
+
+const concat = (arr) => {
+  let fs = '';
+  for ( let i = 0; i<arr.length; i++){
+    let element = arr[i];
+    //fs+=element;
+    if(Array.isArray(element)) {
+      fs+= concat(element);
+    } else {
+      fs+=element;
+    }
+  }
+  return fs;
+}
+
+concat(['a', 'b', ['c', 'd', ['e']]])
