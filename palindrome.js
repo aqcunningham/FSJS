@@ -31,3 +31,14 @@ function palindrome(str){
      }
    }
 
+
+//with recursion:
+
+const isPalindrome = (str) => {
+    if (str.length <= 0) return true;
+
+    const first = str[0].toLowerCase();
+    const last = str[str.length-1].toLowerCase();
+
+    if (first === last) return (isPalindrome(str.slice(1, -1)));
+    else return false;
