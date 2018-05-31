@@ -41,3 +41,17 @@ function sumOfDigits(n){
 }
   return sum;
 } */
+
+//recursion:
+
+const sumDigits = (n) => {
+
+const str = n.toString();
+
+if(str.length === 1) return parseInt(str);
+
+return parseInt(str[0]) + sumDigits(parseInt(str.slice(1)));
+
+}
+
+sumDigits(234)
