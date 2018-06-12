@@ -21,7 +21,7 @@ function underToCamel(str){
        var cpLet = str.charAt((str.indexOf('_')+1)).toUpperCase(); // saves the first underscore and converts into upperCase, which is not suitable for strings with several underscores.
        var fs = str.replace(/_\w/g, cpLet);
           //(vowels.indexOf(str[ind].toLowerCase())) !== -1)
-     }
+     } else return str;
    
    return fs;
 }
