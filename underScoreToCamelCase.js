@@ -27,26 +27,25 @@ function underToCamel(str){
 }
 
 
-//a decision, that I didnt completely understand:
-/*
+// another propper solution:
 
-function underToCamel(str){
-  var fd = false;
-  var ns = '';
-  for (var i = 0; i < str.length; i++){
-   if (str[i] === "_")  {
-     fd = true;
-   }
-   else {
-     if (fd){
-       ns +=str[i].toUpperCase(); //how does it know it's the next char after '_'?
-       fd = false;
-     }
-     else {
-       ns += str[i];
-     }
-   }
+
+const underToCamel = (str) => {
+
+  var under = false; //initually assume that we didn't find the underscope
+  var finalStr = ''; //here we store the final str
+
+  for (let i = 0; i < str.length; i++){
+    if (str[i] === '_') under = true;
+    else { //two scenerios for this else: if under = false || true
+      if (under) //depends on a previous iterataion
+      //let's say we just 'met' underscore and our under turned into true, then the next i needs to turn into capital
+      {finalStr += str[i].toUpperCase();
+      under = false;} //by turning under to false, we 'close' the option to capitalize
+      else finalStr += str[i];
+    }
   }
-  return ns;
-  }
-  */
+  return finalStr;
+}
+
+underToCamel('user_name_what_is')
