@@ -18,19 +18,14 @@ Punctuation and numbers will not be part of the string.
 
 // Write Code Below
 
-function palindrome(str){
-   var strf = '';
-   for(var i = str.length -1; i>=0; i--){
-     strf+=str[i]; 
-   }
-     if (strf === str){
-       return true;
-     }
-     else{
-       return false;
-     }
-   }
-
+const palindrome =(str) =>{
+    let newStr = '';
+    for(let i = str.length-1; i>=0; i--){
+        newStr+=str[i];
+    }
+    if (str === newStr) return true;
+    else return false;
+}
 
 //with recursion:
 
