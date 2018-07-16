@@ -64,9 +64,9 @@ const zooInventory=(arr)=>{
     let newarr = [];
     for ( let i = 0; i<arr.length; i++){
         
-        const [name, [type, age]] = arr[i]; //whats this
+        const [name, [breed, age]] = arr[i]; //whats this? spreading! assigns names directly to the arr
   
-        newarr.push(`${name} the ${type} is ${age}.`);
+        newarr.push(`${name} the ${breed} is ${age}.`);
     }
     return newarr;
 }
