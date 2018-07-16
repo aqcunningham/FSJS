@@ -64,7 +64,7 @@ const zooInventory=(arr)=>{
     let newarr = [];
     for ( let i = 0; i<arr.length; i++){
         
-        const [name, [type, age]] = arr[i];
+        const [name, [type, age]] = arr[i]; //whats this
   
         newarr.push(`${name} the ${type} is ${age}.`);
     }
