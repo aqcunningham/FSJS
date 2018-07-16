@@ -19,7 +19,7 @@ makeGrid(3,4);
 const makeGrid = (rown, rowwid) => {
 var gr = [];
 
-const makeRow = () => { //we make a row, 1 - 3 including
+const makeRow = () => { //we make a row, 1 - 3 including, an additional helper function
   var row = [];
   for (let i = 1; i <= rown; i++){
     row.push(i);
@@ -28,8 +28,8 @@ const makeRow = () => { //we make a row, 1 - 3 including
 }
 
   for( let i = 1; i <=rowwid; i++){ //1-4 including
-    //gr.push(i);
-    //console.log(col)
+         //makeRow function creates a new row, an i element from 1 to 3,
+         //makeRow(4) creates this row 4 times into an arr
    gr.push(makeRow(rown))
   }
   return gr;
