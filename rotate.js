@@ -34,3 +34,16 @@ const rotateArray = (arr, n) => {
       }
         return arr;
     }
+
+
+//another, similar, but shorter:
+
+const rotateArray = (arr, n) => {
+  
+  for (let i = 0; i < Math.abs(n); i++){
+      
+      if (n > 0) arr.unshift(arr.pop());
+      else arr.push(arr.shift());
+  }
+return arr;
+}
