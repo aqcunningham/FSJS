@@ -100,3 +100,23 @@ const mySlice = (originalString, startIdx = 0, endIdx = originalString.length)=>
       return x;
       }
     
+//solution with negative s or e:
+
+
+
+const mySlice = (arr, s = 0, e = arr.length) => {
+var finalarr = [];
+
+   if (s < 0) s = arr.length+s; //for the start index, if it's negative, arr.length+(-s) will give the s
+   if (e < 0) e = arr.length+e; //same for e: arr.length+(-e) will be the positeve e
+
+  for( let i = s; i<e; i++){ //no matter if it's negative or positve, all the s and e we already have calculated and now just push them
+ 
+      finalarr.push(arr[i]);
+    }
+
+
+  
+
+return finalarr;
+}
