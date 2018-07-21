@@ -60,3 +60,29 @@ const leetTranslator = (str) => {
   }
 return f;
 }
+
+
+//another solution, with an obj:
+
+const leetTranslator = (str) => {
+
+  var dict = {};
+  var final = '';
+
+  for (let i = 0; i < letters.length; i++){
+  
+    var curlet = letters[i];
+    var curleet = leetChars[i];
+
+    dict[curlet] = curleet; //creates a whole dictionary with letter: 'leet' pairs
+  }
+
+    for (let i = 0; i < str.length; i++) {
+
+    final += dict[str[i]]; //adds to a new str a values of that given key, dict['a'] => @ 
+
+    }
+  
+return final
+//console.log(dict)
+}
